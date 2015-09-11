@@ -1,0 +1,30 @@
+{
+  "name": "gulp-angular-relative-template-url",
+  "version": "0.0.1",
+  "description": "Allows to write angular templateUrl relative to their source directory in the form `templateUrl: './my-template.html'`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rixo/gulp-angular-relative-template-url.git"
+  },
+  "keywords": [
+    "gulp",
+    "angular",
+    "template",
+    "relative",
+    "path",
+    "angularjs"
+  ],
+  "author": "Rixo <eric@planysphere.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rixo/gulp-angular-relative-template-url/issues"
+  },
+  "dependencies": {
+    "readable-stream": "^2.0.2",
+    "replacestream": "^4.0.0"
+  }
+}
