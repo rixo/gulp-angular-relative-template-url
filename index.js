@@ -4,10 +4,23 @@ var path = require('path');
 var rs = require('replacestream');
 var Transform = require('readable-stream/transform');
 
-module.exports = function relativeTemplateUrl(options) {
+module.exports = {
+  html: function(options) {
+    return relativeTemplateUrl(true, options);
+  },
+  js: function(options) {
+    return relativeTemplateUrl(false, options);
+  }
+};
+
+function relativeTemplateUrl(html, options) {
 
   // TODO
-  var search = /\b(['"]?templateUrl['"]?\b\s*:\s*['"])\.\/([^'"]+)(['"])/;
+  var search = html
+    // regex for html
+    ? /((?:-|\b)template-url\b\s*=\s*['"])\.\/([^'"]+\.html)(['"])/
+    // regex for js
+    : /\b(['"]?templateUrl['"]?\b\s*:\s*['"])\.\/([^'"]+)(['"])/;
 
   return new Transform({
     objectMode: true,
@@ -44,4 +57,4 @@ module.exports = function relativeTemplateUrl(options) {
       }
     }
   });
-};
+}
