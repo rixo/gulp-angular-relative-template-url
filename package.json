@@ -1,6 +1,6 @@
 {
   "name": "gulp-angular-relative-template-url",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Allows to write angular templateUrl relative to their source directory in the form `templateUrl: './my-template.html'`",
   "main": "index.js",
   "scripts": {

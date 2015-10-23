@@ -18,9 +18,9 @@ function relativeTemplateUrl(html, options) {
   // TODO
   var search = html
     // regex for html
-    ? /((?:-|\b)template-url\b\s*=\s*['"])\.\/([^'"]+\.html)(['"])/
+    ? /((?:-|\b)template-url\b\s*=\s*['"])\.\/([^'"]+\.html)(['"])/g
     // regex for js
-    : /\b(['"]?templateUrl['"]?\b\s*:\s*['"])\.\/([^'"]+)(['"])/;
+    : /\b(['"]?templateUrl['"]?\b\s*:\s*['"])\.\/([^'"]+)(['"])/g;
 
   return new Transform({
     objectMode: true,
