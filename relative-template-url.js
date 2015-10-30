@@ -20,7 +20,8 @@ function relativeTemplateUrl(html, options) {
     // regex for html
     ? [
       /((?:-|\b)template-url\b\s*=\s*['"])(\.{1,2}\/[^'"]+\.html)(['"])/g,
-      /(\bng-include\b\s*=\s*(?:'"|"'))(\.{1,2}\/[^'"]+\.html)('"|"')/g
+      /(\bng-include\b\s*=\s*(?:'"|"'))(\.{1,2}\/[^'"]+\.html)('"|"')/g,
+      /(<ng-include[^>]+src\s*=\s*(?:'"|"'))(\.{1,2}\/[^'"]+\.html)('"|"')/g,
     ]
     // regex for js
     : [
